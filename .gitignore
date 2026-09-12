@@ -14,3 +14,5 @@ tts_model/model.onnx
 # Windows specific
 npm-debug.log*
 Thumbs.db
+
+onnx_models/
