@@ -1,0 +1,22 @@
+{
+  "name": "hackaiservice",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node main.js"
+  },
+  "dependencies": {
+    "onnxruntime-node": "^1.29.0",
+    "sherpa-onnx": "^1.13.8",
+    "sherpa-onnx-node": "^1.13.8"
+  },
+  "keywords": [],
+  "allowScripts": {
+    "onnxruntime-node@1.29.0": true
+  }
+}

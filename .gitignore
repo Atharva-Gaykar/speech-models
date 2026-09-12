@@ -1,0 +1,16 @@
+# Node modules
+node_modules/
+
+# Large model binaries (exceeds GitHub's 100MB limit)
+tts_model/model.onnx
+
+# Generated audio files
+*.wav
+*.mp3
+
+# Environment variables
+.env
+
+# Windows specific
+npm-debug.log*
+Thumbs.db
