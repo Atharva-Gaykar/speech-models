@@ -15,6 +15,10 @@ tts_model/model.onnx
 npm-debug.log*
 Thumbs.db
 
-onnx_models/
+onnx_models/assamese
+onnx_models/bengali
+onnx_models/bodo
+onnx_models/manipuri
+onnx_models/nepali
 
 Audio Samples/
