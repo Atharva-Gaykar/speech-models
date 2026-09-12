@@ -33,7 +33,7 @@ node tts.js
 
 ```
 
-<img width="252" height="370" alt="image" src="https://github.com/user-attachments/assets/0750a59d-3095-4896-841f-0b2123c3aa0b" />
+
 
 <img width="501" height="286" alt="Screenshot 2026-09-11 201602" src="https://github.com/user-attachments/assets/ab445338-c5bf-41db-b92d-8479937000b3" />
 
@@ -45,11 +45,5 @@ node tts.js
 
 For offline speech recognition, this project utilizes the Indic Conformer model optimized for `sherpa-onnx`.
 
-**Requirements & Execution**
-The model files and setup instructions for mobile integration are hosted on Hugging Face.
+<img width="212" height="637" alt="image" src="https://github.com/user-attachments/assets/aca352f0-3b14-4ced-966e-180c0d5668df" />
 
-***Repository:** [https://huggingface.co/meetsync/indic-conformer-onnx-sherpa](https://huggingface.co/meetsync/indic-conformer-onnx-sherpa)
-
-
-
-This repository contains the required scripts to download the ONNX model binaries and provides the implementation code for running the STT pipeline locally with React Native.
