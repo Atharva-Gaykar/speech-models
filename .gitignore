@@ -5,7 +5,7 @@ node_modules/
 tts_model/model.onnx
 
 # Generated audio files
-*.wav
+
 *.mp3
 
 # Environment variables
