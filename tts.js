@@ -74,7 +74,7 @@ try {
       return;
     }
 
-    const outputFilename = `output_${item.language.toLowerCase()}_${index}.wav`;
+    const outputFilename = `C:\\Users\\ATHARVA\\Downloads\\my codes\\web\\HackAIService\\Audio Samples\\output_${item.language.toLowerCase()}_${index}.wav`;
     saveWav(outputFilename, audio.sampleRate, audio.samples);
 
     console.log(`✅ Saved to ${outputFilename}`);

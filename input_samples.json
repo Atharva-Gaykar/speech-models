@@ -1,14 +1,60 @@
 [
   {
     "language": "Assamese",
-    "text": "নমস্কাৰ, আপুনি আজি কেনে আছে? বতৰটো আজি বৰ ধুনীয়া।"
+    "text": "একেলগে শিকিবলৈ যাওক"
+  },
+  {
+    "language": "Assamese",
+    "text": "একেলগে শিকিব"
+  },
+  {
+    "language": "Assamese",
+    "text": "আজিৰ পৰিকল্পনা"
+  },
+  {
+    "language": "Assamese",
+    "text": "কোন কোন"
+  },
+
+  {
+    "language": "Bengali",
+    "text": "খওপেন হু'স হু'"
+  },
+  {
+    "language": "Bengali",
+    "text": "হু'স হু"
+  },
+  {
+    "language": "Bengali",
+    "text": "ওপেন হু'স হু"
+  },
+  {
+    "language": "Bengali",
+    "text": "প্লে হু'স হু"
+  },
+  {
+    "language": "Bengali",
+    "text": "আজকের পরিকল্পনা"
+  },
+  {
+    "language": "Bengali",
+    "text": "একসাথে শিখি"
+  },
+
+  {
+    "language": "Nepali",
+    "text": "दिनको योजना"
   },
   {
     "language": "Nepali",
-    "text": "नमस्ते, तपाईंलाई आज कस्तो छ? आजको दिन धेरै राम्रो छ।"
+    "text": "सँगै सिक्नुहोस्"
   },
   {
-    "language": "Bodo",
-    "text": "खुलुमबाय, नोंहा दिनै माबोरै दं? जोबोर गोजोननाय मोनबाय।"
+    "language": "Nepali",
+    "text": "सँगै सिकौं"
+  },
+  {
+    "language": "Nepali",
+    "text": "सिक्न सुरु गर्नुहोस्"
   }
 ]
