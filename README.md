@@ -47,3 +47,30 @@ For offline speech recognition, this project utilizes the Indic Conformer model 
 
 <img width="212" height="637" alt="image" src="https://github.com/user-attachments/assets/aca352f0-3b14-4ced-966e-180c0d5668df" />
 
+
+
+### 🎙️ Voice Based Game Page Navigation
+
+Audio Samples Folder
+        ↓
+game_voice_navigation.js reads WAV file
+        ↓
+Language detected from filename
+        ↓
+Correct ONNX STT model selected
+        ↓
+Audio converted to text
+        ↓
+Language-specific phrases loaded from navigation_data.json
+        ↓
+Exact Match
+        ↓
+Fuzzy Match if Exact Match fails
+        ↓
+Game ID returned
+        ↓
+Frontend can navigate to that game's page
+
+
+
+
