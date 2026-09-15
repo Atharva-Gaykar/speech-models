@@ -20,6 +20,39 @@ Follow the folder structure shown below when adding or modifying files in this p
 
 This structure keeps the audio files, speech models, scripts, and navigation logic organized and makes it easier to maintain the project.
 
+
+## 📁 STT Model Folder Structure
+
+```text
+models/
+└── stt/
+    ├── as/
+    │   ├── as_model.int8.onnx
+    │   └── tokens.txt
+    ├── bn/
+    │   ├── bn_model.int8.onnx
+    │   └── tokens.txt
+    ├── brx/
+    │   ├── brx_model.int8.onnx
+    │   └── tokens.txt
+    ├── mni/
+    │   ├── mni_model.int8.onnx
+    │   └── tokens.txt
+    └── ne/
+        ├── ne_model.int8.onnx
+        └── tokens.txt
+```
+
+### Language Model Mapping
+
+| Folder | Language | Model |
+|--------|----------|-------|
+| `as` | Assamese | `as_model.int8.onnx` |
+| `bn` | Bengali | `bn_model.int8.onnx` |
+| `brx` | Bodo | `brx_model.int8.onnx` |
+| `mni` | Manipuri | `mni_model.int8.onnx` |
+| `ne` | Nepali | `ne_model.int8.onnx` |
+
 ---
 
 ## 🔊 Offline Text-to-Speech (TTS) Generation
