@@ -78,11 +78,14 @@ Fuzzy Match if Exact Match fails
         ↓
         
 Game ID returned
+
         ↓
-        
+
 Frontend can navigate to that game's page
 
 
+
+-- 
 
 
 
