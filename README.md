@@ -1,108 +1,149 @@
-### 🎙️ Offline Text-to-Speech (TTS) Generation
+# 🎙️ Voice Navigation & Offline Speech System
 
-The core execution script is `tts.js` (working code). It utilizes `sherpa-onnx` to perform fast, offline inference using a multilingual VITS TTS model, converting text directly into `.wav` audio files.
+This module provides an **offline speech-processing pipeline** for voice-based interaction and navigation within the application.
 
-**Requirements**
+It includes:
 
-1. **Dependencies:** Ensure your node modules are installed (defined in `package.json`).
-```bash
-npm install
-
-```
-
-
-
-**Inputs**
-The script reads target phrases from an input file. Format your inputs as an array of JSON objects containing the target language and the native text:
-
-```json
-[
-  {
-    "language": "Assamese",
-    "text": "নমস্কাৰ, আপুনি আজি কেনে আছে? বতৰটো আজি বৰ ধুনীয়া।"
-  }
-]
-
-```
-
-**Usage**
-Run the generator via Node.js to process the inputs and output audio files:
-
-```bash
-node tts.js
-
-```
-
-
-
-<img width="501" height="286" alt="Screenshot 2026-09-11 201602" src="https://github.com/user-attachments/assets/ab445338-c5bf-41db-b92d-8479937000b3" />
+* 📁 A standardized project folder structure
+* 🔊 Offline Text-to-Speech (TTS) generation
+* 📥 Automatic STT model downloading and setup
+* 🎤 Offline Speech-to-Text (STT) processing
+* 🎮 Voice-based navigation between game pages
 
 ---
 
+## 📁 Folder Structure
 
+Follow the folder structure shown below when adding or modifying files in this project.
 
-### 🎙️ Offline Speech-to-Text (STT) Generation
+<img width="212" height="462" alt="image" src="https://github.com/user-attachments/assets/15d981e9-df03-469e-9b23-ac4ea4d08d1e" />
 
-For offline speech recognition, this project utilizes the Indic Conformer model optimized for `sherpa-onnx`.
+This structure keeps the audio files, speech models, scripts, and navigation logic organized and makes it easier to maintain the project.
 
-<img width="212" height="637" alt="image" src="https://github.com/user-attachments/assets/aca352f0-3b14-4ced-966e-180c0d5668df" />
+---
 
+## 🔊 Offline Text-to-Speech (TTS) Generation
 
+**Reference file:** `tts.js`
 
-### 🎙️ Voice Based Game Page Navigation
+The TTS module generates speech **locally without requiring an internet connection**.
 
-Audio Samples Folder
+The generated audio can be used for:
 
-        ↓
-game_voice_navigation.js reads WAV file
+* Voice prompts
+* Game instructions
+* Navigation feedback
+* Other spoken responses within the application
 
-        ↓
-Language detected from filename
+### TTS Flow
 
-        ↓
-Correct ONNX STT model selected
+The `tts.js` file handles the process of loading the TTS model and generating audio from text.
 
-        ↓
-Audio converted to text
+---
 
+## 📥 STT Model Download
 
-        ↓
-Language-specific phrases loaded from navigation_data.json
+**Reference file:** `test_model_download.js`
 
-        ↓
+The STT model download script is responsible for obtaining and preparing the required Speech-to-Text models.
+
+<img width="2026" height="4062" alt="model-download-flow" src="https://github.com/user-attachments/assets/2df647cb-8bd7-4e26-b5b2-d4fd9ce000a7" />
+
+### STT Model Setup
+
+The download process ensures that the required model files are available locally before the speech-recognition pipeline is executed.
+
+After the models are downloaded, they can be used by the voice navigation system for offline transcription.
+
+---
+
+## 🎮 Voice-Based Game Page Navigation
+
+**Reference file:** `game_navigation....js`
+
+The voice navigation system allows the user to navigate between different game pages using spoken commands.
+
+<img width="554" height="2122" alt="game-page-flow-simple" src="https://github.com/user-attachments/assets/39b149af-5bb1-43da-bcec-6f010c0120e9" />
+
+### Navigation Flow
+
+```text
+Audio Input
+     ↓
+WAV File Read
+     ↓
+Language Identified
+     ↓
+Correct ONNX STT Model Selected
+     ↓
+Speech Converted to Text
+     ↓
+Language-Specific Navigation Phrases Loaded
+     ↓
 Exact Match
+     ↓
+Fuzzy Match (if exact match fails)
+     ↓
+Game ID Returned
+     ↓
+Frontend Navigates to the Corresponding Game Page
+```
 
-        ↓
-Fuzzy Match if Exact Match fails
+The system first determines the language of the audio input and selects the corresponding ONNX STT model.
 
-        ↓
-        
-Game ID returned
+The transcribed text is then compared against the language-specific navigation phrases. An **exact match** is attempted first, followed by **fuzzy matching** when an exact match cannot be found.
 
-        ↓
+Once a valid command is identified, the corresponding **Game ID** is returned so that the frontend can navigate to the appropriate game page.
 
-Frontend can navigate to that game's page
+---
 
+## 🖥️ Game Page UI & Voice Navigation Flow
 
+The complete interaction between the voice-navigation system and the game-page UI is illustrated below.
 
--- 
+<img width="1124" height="3146" alt="gamepage-ui-voice-navigation-flow" src="https://github.com/user-attachments/assets/0339fb80-40dc-4dd8-8a82-03fae6018b05" />
 
+This flow shows how voice input is processed and ultimately connected to the frontend game-navigation experience.
 
+---
 
-## Model download path diagram
+## 🔗 Related Files
 
+| File                     | Purpose                              |
+| ------------------------ | ------------------------------------ |
+| `tts.js`                 | Offline Text-to-Speech generation    |
+| `test_model_download.js` | STT model download and setup         |
+| `game_navigation....js`  | Voice-based game navigation          |
+| `navigation_data.json`   | Language-specific navigation phrases |
+| `Audio Samples/`         | Sample WAV files used for testing    |
+| `onnx_models/`           | Local ONNX STT models                |
 
-<img width="2026" height="4062" alt="image" src="https://github.com/user-attachments/assets/83813492-939b-47a3-a3da-6c8bd95ef210" />
+---
 
+## ⚙️ Overall System Flow
 
+```text
+User Voice Input
+       ↓
+Audio Sample / WAV File
+       ↓
+Language Detection
+       ↓
+Language-Specific ONNX STT Model
+       ↓
+Speech-to-Text
+       ↓
+Navigation Phrase Matching
+       ↓
+Exact Match
+       ↓
+Fuzzy Match (Fallback)
+       ↓
+Game ID
+       ↓
+Frontend Game Navigation
+       ↓
+Selected Game Page
+```
 
-
-
-
-
-
-
-
-
-
-
+The system is designed to keep the speech-processing pipeline **local and offline**, while providing voice-based navigation between game pages.
