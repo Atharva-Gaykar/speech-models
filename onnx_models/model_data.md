@@ -1,1 +1,0 @@
-** This contains model to convert speech to text.
