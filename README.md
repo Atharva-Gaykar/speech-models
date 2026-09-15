@@ -49,7 +49,7 @@ The STT model download script is responsible for obtaining and preparing the req
 
 <img width="2026" height="4062" alt="model-download-flow" src="https://github.com/user-attachments/assets/2df647cb-8bd7-4e26-b5b2-d4fd9ce000a7" />
 
-### STT Model Setup
+### STT Model Setup (Refer stt.js)
 
 The download process ensures that the required model files are available locally before the speech-recognition pipeline is executed.
 
